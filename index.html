@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tilda Nk | Free AI Courses & Tools | Learn ChatGPT & AI Agents</title>
+    <meta name="description" content="Join 25,000+ learners! Get free access to ChatGPT courses, Prompt Engineering, AI Agents, and Google AI Essentials. Plus discover the best AI tools.">
+    <meta name="keywords" content="AI courses, ChatGPT tutorial, prompt engineering, AI agents, free AI education">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Tilda Nk | Turning AI Complexity into Your Superpower">
+    <meta property="og:description" content="Free AI courses and tools to help you master ChatGPT, prompt engineering, and AI agents.">
+    <meta property="og:type" content="website">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* Colors */
+            --color-primary-purple: #8B5CF6;
+            --color-primary-pink: #EC4899;
+            --color-primary-fuchsia: #D946EF;
+            --color-background: #FAFAFA;
+            --color-surface: #FFFFFF;
+            --color-surface-elevated: #F5F5F7;
+            --color-text-primary: #1A1A1A;
+            --color-text-secondary: #525252;
+            --color-text-tertiary: #A3A3A3;
+            --color-success: #10B981;
+            
+            /* Gradients */
+            --gradient-primary: linear-gradient(135deg, #8B5CF6 0%, #EC4899 50%, #D946EF 100%);
+            --gradient-secondary: linear-gradient(180deg, #F5F3FF 0%, #FDF2F8 100%);
+            
+            /* Shadows */
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            --shadow-glow: 0 0 20px rgba(139, 92, 246, 0.3);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--color-background);
+            color: var(--color-text-primary);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+        
+        /* Animated Gradient Background */
+        .gradient-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 0;
+            pointer-events: none;
+        }
+        
+        .gradient-bg::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 20% 30%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 70%, rgba(236, 72, 153, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 50% 50%, rgba(217, 70, 239, 0.1) 0%, transparent 70%);
+            animation: morphGradient 20s ease-in-out infinite;
+        }
+        
+        .gradient-bg::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' /%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+        
+        @keyframes morphGradient {
+            0%, 100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+            33% {
+                transform: translate(5%, 5%) rotate(120deg);
+            }
+            66% {
+                transform: translate(-5%, 5%) rotate(240deg);
+            }
+        }
+        
+        /* Container */
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 60px 0 80px;
+            position: relative;
+        }
+        
+        .profile-wrapper {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 28px;
+        }
+        
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 0 0 1px rgba(139, 92, 246, 0.1), var(--shadow-lg), var(--shadow-glow);
+            transition: all 0.3s ease;
+            animation: fadeInScale 0.6s ease-out;
+            object-fit: cover;
+        }
+        
+        .profile-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 0 1px rgba(139, 92, 246, 0.2), var(--shadow-xl), 0 0 30px rgba(139, 92, 246, 0.5);
+        }
+        
+        .hero-name {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--color-text-primary);
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+            animation: fadeInUp 0.6s ease-out 0.2s both;
+        }
+        
+        .hero-tagline {
+            font-size: 1.125rem;
+            color: var(--color-text-secondary);
+            max-width: 600px;
+            margin: 0 auto 32px;
+            font-weight: 500;
+            line-height: 1.6;
+            animation: fadeInUp 0.6s ease-out 0.4s both;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.6s ease-out 0.6s both;
+        }
+        
+        .social-link {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-text-primary);
+            text-decoration: none;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(139, 92, 246, 0.1);
+        }
+        
+        .social-link:hover {
+            transform: scale(1.1);
+            box-shadow: var(--shadow-md);
+            border: 1px solid transparent;
+            background: var(--gradient-primary);
+            color: white;
+        }
+        
+        /* Section */
+        .section {
+            margin-bottom: 64px;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-text-primary);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .section-subtitle {
+            color: var(--color-text-secondary);
+            font-size: 0.9375rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        /* Course Cards */
+        .course-grid {
+            display: grid;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .course-card {
+            background: white;
+            border: 1px solid rgba(139, 92, 246, 0.1);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .course-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+        
+        .course-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: transparent;
+        }
+        
+        .course-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .course-number {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 3rem;
+            font-weight: 700;
+            font-family: 'Outfit', sans-serif;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            opacity: 0.15;
+            line-height: 1;
+        }
+        
+        .course-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--color-text-primary);
+            margin-bottom: 12px;
+            padding-right: 60px;
+            line-height: 1.3;
+        }
+        
+        .course-description {
+            color: var(--color-text-secondary);
+            font-size: 0.875rem;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .course-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: var(--gradient-primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 0.875rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(139, 92, 246, 0.3);
+        }
+        
+        .course-cta:hover {
+            transform: scale(1.02);
+            filter: brightness(1.1);
+            box-shadow: 0 4px 12px rgba(139, 92, 246, 0.4);
+        }
+        
+        .course-cta:active {
+            transform: scale(0.98);
+        }
+        
+        /* Email Capture Card */
+        .email-card {
+            background: linear-gradient(135deg, #F5F3FF 0%, #FDF2F8 100%);
+            border: 2px solid rgba(139, 92, 246, 0.2);
+            border-radius: 20px;
+            padding: 32px 24px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .email-card::before {
+            content: '✨';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2rem;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .email-card-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-text-primary);
+            margin-bottom: 12px;
+        }
+        
+        .email-card-description {
+            color: var(--color-text-secondary);
+            margin-bottom: 24px;
+            font-size: 0.9375rem;
+        }
+        
+        .email-form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        .email-input {
+            padding: 14px 18px;
+            border: 2px solid rgba(139, 92, 246, 0.2);
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: 'DM Sans', sans-serif;
+            background: white;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+        
+        .email-input:focus {
+            border-color: var(--color-primary-purple);
+            box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+        }
+        
+        .email-submit {
+            padding: 14px 32px;
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'DM Sans', sans-serif;
+            box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+        }
+        
+        .email-submit:hover {
+            transform: scale(1.02);
+            filter: brightness(1.1);
+            box-shadow: 0 6px 16px rgba(139, 92, 246, 0.4);
+        }
+        
+        .email-submit:active {
+            transform: scale(0.98);
+        }
+        
+        /* Tool Cards */
+        .tools-grid {
+            display: grid;
+            gap: 20px;
+        }
+        
+        .tool-card {
+            background: white;
+            border: 1px solid rgba(139, 92, 246, 0.1);
+            border-radius: 16px;
+            padding: 24px;
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            border-color: rgba(139, 92, 246, 0.3);
+        }
+        
+        .tool-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 12px;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.25rem;
+            font-family: 'Outfit', sans-serif;
+            flex-shrink: 0;
+        }
+        
+        .tool-content {
+            flex: 1;
+        }
+        
+        .tool-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+        
+        .tool-name {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--color-text-primary);
+        }
+        
+        .tool-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            background: rgba(139, 92, 246, 0.1);
+            color: var(--color-primary-purple);
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        
+        .tool-description {
+            color: var(--color-text-secondary);
+            font-size: 0.875rem;
+            line-height: 1.5;
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--color-text-tertiary);
+            font-size: 0.875rem;
+        }
+        
+        /* Animations */
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Responsive */
+        @media (min-width: 768px) {
+            .hero {
+                padding: 80px 0 100px;
+            }
+            
+            .profile-image {
+                width: 140px;
+                height: 140px;
+            }
+            
+            .hero-name {
+                font-size: 3.5rem;
+            }
+            
+            .hero-tagline {
+                font-size: 1.25rem;
+            }
+            
+            .section-title {
+                font-size: 1.875rem;
+            }
+            
+            .course-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .course-title {
+                font-size: 1.5rem;
+            }
+            
+            .course-description {
+                font-size: 1rem;
+            }
+            
+            .email-form {
+                flex-direction: row;
+            }
+            
+            .email-input {
+                flex: 1;
+            }
+            
+            .tools-grid {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+        
+        /* Success State */
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 24px;
+            background: rgba(16, 185, 129, 0.1);
+            border: 2px solid rgba(16, 185, 129, 0.3);
+            border-radius: 12px;
+            color: var(--color-success);
+            font-weight: 600;
+            margin-top: 16px;
+        }
+        
+        .success-message.show {
+            display: block;
+            animation: fadeInUp 0.4s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated Gradient Background -->
+    <div class="gradient-bg"></div>
+    
+    <div class="container">
+        <!-- Hero Section -->
+        <header class="hero">
+            <div class="profile-wrapper">
+                <img src="Screenshot_2026-01-13_at_1_11_24_PM.png" alt="Tilda Nk" class="profile-image">
+            </div>
+            <h1 class="hero-name">Tilda Nk</h1>
+            <p class="hero-tagline">Turning AI Complexity into Your Superpower</p>
+            
+            <div class="social-links">
+                <a href="https://www.tiktok.com/@digital.tilda" class="social-link" aria-label="TikTok" target="_blank" rel="noopener">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0011.14-4.02v-6.95a8.16 8.16 0 004.65 1.46v-3.4a4.84 4.84 0 01-1.2-.5z"/>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/digital.tilda" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+                <a href="https://www.youtube.com/@digital.tilda" class="social-link" aria-label="YouTube" target="_blank" rel="noopener">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                    </svg>
+                </a>
+                <a href="mailto:hello@tildank.com" class="social-link" aria-label="Email" target="_blank" rel="noopener">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                </a>
+            </div>
+        </header>
+        
+        <!-- Free Courses Section -->
+        <section class="section" id="courses">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span>🎓</span>
+                    Free AI Courses
+                </h2>
+                <p class="section-subtitle">Unlock your AI potential with these comprehensive courses</p>
+            </div>
+            
+            <div class="course-grid">
+                <div class="course-card">
+                    <div class="course-number">01</div>
+                    <h3 class="course-title">ChatGPT for Beginners</h3>
+                    <p class="course-description">Master ChatGPT from zero to hero. Learn prompts, workflows, and real-world applications to boost your productivity.</p>
+                    <button class="course-cta" onclick="showEmailCapture('ChatGPT for Beginners')">
+                        Get Free Access
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </div>
+                
+                <div class="course-card">
+                    <div class="course-number">02</div>
+                    <h3 class="course-title">Prompt Engineering Mastery</h3>
+                    <p class="course-description">Unlock the full potential of AI with advanced prompting techniques that get you better results every time.</p>
+                    <button class="course-cta" onclick="showEmailCapture('Prompt Engineering Mastery')">
+                        Get Free Access
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </div>
+                
+                <div class="course-card">
+                    <div class="course-number">03</div>
+                    <h3 class="course-title">Building AI Agents</h3>
+                    <p class="course-description">Create powerful AI agents that automate your work. From simple bots to complex workflows.</p>
+                    <button class="course-cta" onclick="showEmailCapture('Building AI Agents')">
+                        Get Free Access
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </div>
+                
+                <div class="course-card">
+                    <div class="course-number">04</div>
+                    <h3 class="course-title">Google AI Essentials</h3>
+                    <p class="course-description">Master Google's AI tools including Gemini, Bard, and AI-powered workflows for maximum efficiency.</p>
+                    <button class="course-cta" onclick="showEmailCapture('Google AI Essentials')">
+                        Get Free Access
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- AI Tools Section -->
+        <section class="section" id="tools">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span>🚀</span>
+                    Recommended AI Tools
+                </h2>
+                <p class="section-subtitle">The tools I use and recommend to my students</p>
+            </div>
+            
+            <div class="tools-grid">
+                <a href="https://elevenlabs.io" class="tool-card" target="_blank" rel="noopener">
+                    <div class="tool-icon">E</div>
+                    <div class="tool-content">
+                        <div class="tool-header">
+                            <h3 class="tool-name">ElevenLabs</h3>
+                            <span class="tool-badge">AI Voice</span>
+                        </div>
+                        <p class="tool-description">Create incredibly realistic AI voices for your content. Perfect for podcasts, videos, and audiobooks.</p>
+                    </div>
+                </a>
+                
+                <a href="https://heygen.com" class="tool-card" target="_blank" rel="noopener">
+                    <div class="tool-icon">H</div>
+                    <div class="tool-content">
+                        <div class="tool-header">
+                            <h3 class="tool-name">HeyGen</h3>
+                            <span class="tool-badge">AI Video</span>
+                        </div>
+                        <p class="tool-description">Generate professional AI avatars and videos in minutes. No camera or editing skills needed.</p>
+                    </div>
+                </a>
+                
+                <a href="https://marketingblocks.ai" class="tool-card" target="_blank" rel="noopener">
+                    <div class="tool-icon">M</div>
+                    <div class="tool-content">
+                        <div class="tool-header">
+                            <h3 class="tool-name">MarketingBlocks</h3>
+                            <span class="tool-badge">AI Marketing</span>
+                        </div>
+                        <p class="tool-description">All-in-one AI marketing suite. Create landing pages, ads, copy, and graphics with AI assistance.</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <p>© 2026 Tilda Nk. Making AI accessible to everyone.</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Course CTA handling
+        function showEmailCapture(courseName) {
+            // Replace with your actual course access URL or modal
+            // For now, this logs the course name and could redirect to a landing page
+            console.log('Course selected:', courseName);
+            
+            // Example: Redirect to course landing page
+            // window.location.href = `/courses/${courseName.toLowerCase().replace(/\s+/g, '-')}`;
+            
+            // Or open in new tab
+            // window.open('/course-access?course=' + encodeURIComponent(courseName), '_blank');
+            
+            alert(`Get access to: ${courseName}\n\nRedirect to your course landing page here.`);
+        }
+        
+        // Gradient animation on mouse move
+        let mouseX = 0;
+        let mouseY = 0;
+        
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX / window.innerWidth;
+            mouseY = e.clientY / window.innerHeight;
+            
+            const gradientBg = document.querySelector('.gradient-bg::before');
+            // This creates a subtle interactive effect
+        });
+        
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all sections
+        document.querySelectorAll('.section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
