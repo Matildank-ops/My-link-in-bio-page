@@ -229,6 +229,119 @@
             margin-bottom: 40px;
         }
         
+        /* Premium Course Card */
+        .premium-course-card {
+            background: linear-gradient(135deg, #FAF5FF 0%, #FDF4FF 100%);
+            border: 2px solid rgba(139, 92, 246, 0.25);
+            border-radius: 20px;
+            padding: 40px 32px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.15);
+        }
+        
+        .premium-course-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(236, 72, 153, 0.08) 0%, transparent 70%);
+            animation: rotateSlow 20s linear infinite;
+        }
+        
+        @keyframes rotateSlow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .premium-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            background: var(--gradient-primary);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .premium-course-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 12px;
+            position: relative;
+            z-index: 1;
+            line-height: 1.2;
+        }
+        
+        .premium-course-subtitle {
+            color: var(--color-text-secondary);
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 28px;
+            position: relative;
+            z-index: 1;
+            line-height: 1.5;
+        }
+        
+        .premium-features {
+            display: grid;
+            gap: 12px;
+            margin-bottom: 32px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--color-text-primary);
+            font-size: 0.9375rem;
+        }
+        
+        .feature-item svg {
+            color: var(--color-primary-purple);
+            flex-shrink: 0;
+        }
+        
+        .premium-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 32px;
+            background: var(--gradient-primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 24px rgba(139, 92, 246, 0.4);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .premium-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(139, 92, 246, 0.5);
+        }
+        
+        .premium-cta:active {
+            transform: translateY(0);
+        }
+        
         .course-card {
             background: white;
             border: 1px solid rgba(139, 92, 246, 0.1);
@@ -550,6 +663,23 @@
                 font-size: 1rem;
             }
             
+            .premium-course-card {
+                padding: 48px 40px;
+            }
+            
+            .premium-course-title {
+                font-size: 2.5rem;
+            }
+            
+            .premium-course-subtitle {
+                font-size: 1.0625rem;
+            }
+            
+            .premium-features {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+            }
+            
             .email-form {
                 flex-direction: row;
             }
@@ -608,12 +738,12 @@
                         <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                     </svg>
                 </a>
-                <a href="https://www.youtube.com/@DigitalTilda" class="social-link" aria-label="YouTube" target="_blank" rel="noopener">
+                <a href="https://www.youtube.com/@digital.tilda" class="social-link" aria-label="YouTube" target="_blank" rel="noopener">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                     </svg>
                 </a>
-                <a href="mailto:tildankem@gmail.com" class="social-link" aria-label="Email" target="_blank" rel="noopener">
+                <a href="/cdn-cgi/l/email-protection#59313c353536192d30353d383732773a3634" class="social-link" aria-label="Email" target="_blank" rel="noopener">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                         <polyline points="22,6 12,13 2,6"></polyline>
@@ -621,6 +751,62 @@
                 </a>
             </div>
         </header>
+        
+        <!-- Paid Course Section -->
+        <section class="section" id="paid-course">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span>💎</span>
+                    Premium Course
+                </h2>
+                <p class="section-subtitle">Transform your financial future with AI-powered strategies</p>
+            </div>
+            
+            <div class="premium-course-card">
+                <div class="premium-badge">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                    </svg>
+                    Premium
+                </div>
+                <h3 class="premium-course-title">AI WEALTH BLUEPRINT</h3>
+                <p class="premium-course-subtitle">48 Proven Ways To Build Wealth With Artificial Intelligence in 2026</p>
+                
+                <div class="premium-features">
+                    <div class="feature-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span>48 Proven Wealth-Building Strategies</span>
+                    </div>
+                    <div class="feature-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span>Real-World AI Money-Making Methods</span>
+                    </div>
+                    <div class="feature-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span>Step-by-Step Implementation Guide</span>
+                    </div>
+                    <div class="feature-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span>2026 Cutting-Edge AI Tactics</span>
+                    </div>
+                </div>
+                
+                <a href="https://whop.com/digitaltilda/ai-wealth2026" target="_blank" rel="noopener" class="premium-cta">
+                    <span>Unlock the Blueprint</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </section>
         
         <!-- Free Courses Section -->
         <section class="section" id="courses">
@@ -695,7 +881,7 @@
             </div>
             
             <div class="tools-grid">
-                <a href="https://try.elevenlabs.io/at8rra5ssm9s" class="tool-card" target="_blank" rel="noopener">
+                <a href="https://elevenlabs.io" class="tool-card" target="_blank" rel="noopener">
                     <div class="tool-icon">E</div>
                     <div class="tool-content">
                         <div class="tool-header">
@@ -717,7 +903,7 @@
                     </div>
                 </a>
                 
-                <a href="https://hey.marketingblocks.ai?deal=matilda45" class="tool-card" target="_blank" rel="noopener">
+                <a href="https://marketingblocks.ai" class="tool-card" target="_blank" rel="noopener">
                     <div class="tool-icon">M</div>
                     <div class="tool-content">
                         <div class="tool-header">
