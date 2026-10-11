@@ -47,8 +47,12 @@
     .category-nav a { color:var(--accent); font-weight:700; text-decoration:none; }
     .category-nav a:hover { text-decoration:underline; }
     footer { padding:28px 0; border-top:1px solid var(--line); color:var(--muted); font-size:.85rem; }
+    #free-ai-courses { margin-bottom:58px; }
+    #free-ai-courses .grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    .course-upcoming { background:#f1ede5; box-shadow:none; }
+    .course-upcoming span { color:var(--muted); }
     @media(max-width:850px) { .grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
-    @media(max-width:600px) { .topic-grid { grid-template-columns:1fr; } .topic-card { min-height:0; } .wrap { width:min(100% - 32px,1120px); } .grid { grid-template-columns:1fr; } .card { min-height:0; } .section-heading { align-items:start; flex-direction:column; gap:4px; } }
+    @media(max-width:600px) { #free-ai-courses .grid { grid-template-columns:1fr; } .topic-grid { grid-template-columns:1fr; } .topic-card { min-height:0; } .wrap { width:min(100% - 32px,1120px); } .grid { grid-template-columns:1fr; } .card { min-height:0; } .section-heading { align-items:start; flex-direction:column; gap:4px; } }
     @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .card,.topic-card { transition:none; } }
   </style>
   <link rel="stylesheet" href="/assets/site.css">
@@ -69,11 +73,18 @@
 <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">Menu</button>
 </div></header>
   <div class="hero"><div class="wrap"><p class="eyebrow">The practical collection</p><h1>Make more of <em>AI.</em></h1><p class="intro">Clear, practical guides for using AI tools, creating useful work, and turning ideas into something real. Pick a topic and start where you are.</p></div></div>
-  <main class="wrap" id="guides"><div class="section-heading"><h2>Browse by topic</h2><p class="count">28 guides</p></div>
+  <main class="wrap" id="guides"><div class="section-heading"><h2>Browse by topic</h2><p class="count">29 guides</p></div>
     <div class="topic-grid">
       <a class="topic-card visual-card" href="/guides/claude/"><div class="card-art"><img src="/assets/covers/website-builder-960.webp" srcset="/assets/covers/website-builder-480.webp 480w, /assets/covers/website-builder-960.webp 960w, /assets/covers/website-builder-1440.webp 1440w" sizes="(max-width: 600px) calc(100vw - 32px), 550px" width="960" height="640" alt="" loading="lazy" decoding="async"></div><div class="card-body"><p class="eyebrow">15 guides</p><h2>Claude</h2><p>Explore Claude chat, Claude Code, prompts, content, websites and practical workflows.</p><span>Explore Claude guides →</span></div></a>
-      <a class="topic-card visual-card" href="/guides/chatgpt/"><div class="card-art"><img src="/assets/covers/chat-toolkit-960.webp" srcset="/assets/covers/chat-toolkit-480.webp 480w, /assets/covers/chat-toolkit-960.webp 960w, /assets/covers/chat-toolkit-1440.webp 1440w" sizes="(max-width: 600px) calc(100vw - 32px), 550px" width="960" height="640" alt="" loading="lazy" decoding="async"></div><div class="card-body"><p class="eyebrow">10 guides</p><h2>ChatGPT</h2><p>Find ChatGPT prompts, settings, creative projects and connected workflows.</p><span>Explore ChatGPT guides →</span></div></a>
+      <a class="topic-card visual-card" href="/guides/chatgpt/"><div class="card-art"><img src="/assets/covers/chat-toolkit-960.webp" srcset="/assets/covers/chat-toolkit-480.webp 480w, /assets/covers/chat-toolkit-960.webp 960w, /assets/covers/chat-toolkit-1440.webp 1440w" sizes="(max-width: 600px) calc(100vw - 32px), 550px" width="960" height="640" alt="" loading="lazy" decoding="async"></div><div class="card-body"><p class="eyebrow">11 guides</p><h2>ChatGPT</h2><p>Find ChatGPT prompts, settings, creative projects and connected workflows.</p><span>Explore ChatGPT guides →</span></div></a>
     </div>
+    <section id="free-ai-courses" aria-labelledby="course-title"><div class="section-heading"><h2 id="course-title">Free AI courses</h2><p class="count">One guide available now · More on the way</p></div>
+    <div class="grid">
+      <a class="card" href="/guides/chatgpt/chatgpt-for-beginners/"><p class="eyebrow">Available now</p><h3>ChatGPT for Beginners</h3><p>Start your first conversation with the updated 2026 guide and screenshots.</p><span>Get the guide ↗</span></a>
+      <article class="card course-upcoming"><p class="eyebrow">Coming soon</p><h3>Prompt Engineering Mastery</h3><p>Course materials will be added here when they are ready.</p><span>Coming soon</span></article>
+      <article class="card course-upcoming"><p class="eyebrow">Coming soon</p><h3>Building AI Agents</h3><p>Course materials will be added here when they are ready.</p><span>Coming soon</span></article>
+      <article class="card course-upcoming"><p class="eyebrow">Coming soon</p><h3>Google AI Essentials</h3><p>Course materials will be added here when they are ready.</p><span>Coming soon</span></article>
+    </div></section>
     <section aria-labelledby="more-guides"><div class="section-heading"><h2 id="more-guides">More guides</h2><p class="count">3 guides</p></div>
     <div class="grid">
       <a class="card visual-card" href="/guides/digital-product-launch-bundle/"><div class="card-art"><img src="/assets/covers/business-launch-960.webp" srcset="/assets/covers/business-launch-480.webp 480w, /assets/covers/business-launch-960.webp 960w, /assets/covers/business-launch-1440.webp 1440w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 850px) 46vw, 360px" width="960" height="640" alt="" loading="lazy" decoding="async"></div><div class="card-body"><p class="eyebrow">Digital products</p><h3>The Beginner Digital Product Launch Bundle</h3><p>Go from a useful idea to a finished product, a sales page, and a tested checkout.</p><span>Read the guide →</span></div></a>
