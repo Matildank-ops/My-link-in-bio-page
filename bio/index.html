@@ -42,6 +42,19 @@
     .pending .link-note { color:#676f73; }
     .pending .arrow { background:var(--line); color:#686f70; }
     footer { margin-top:22px; color:var(--muted); font-size:.74rem; text-align:center; }
+    @keyframes rise-in { from { opacity:0; transform:translateY(14px); } to { opacity:1; transform:translateY(0); } }
+    @keyframes portrait-float { 50% { transform:translateY(-5px); } }
+    @media(prefers-reduced-motion:no-preference) {
+      .brand { animation:rise-in .65s ease-out both; }
+      .hero { animation:rise-in .75s .12s ease-out both; }
+      .links .link-card { animation:rise-in .65s ease-out both; }
+      .links .link-card:nth-child(1) { animation-delay:.28s; }
+      .links .link-card:nth-child(2) { animation-delay:.38s; }
+      .links .link-card:nth-child(3) { animation-delay:.48s; }
+      .portrait { animation:portrait-float 5s 1s ease-in-out infinite; }
+      a.link-card .arrow { transition:transform .18s ease; }
+      a.link-card:is(:hover,:focus-visible) .arrow { transform:translate(3px,-3px); }
+    }
     @media(max-width:420px) { .page { width:min(100% - 32px,570px); padding-top:20px; } .hero { margin-top:28px; } .link-card { min-height:90px; padding:16px; } .link-title { font-size:1.38rem; } }
     @media(prefers-reduced-motion:reduce) { a.link-card { transition:none; } }
   </style>
