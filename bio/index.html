@@ -28,7 +28,7 @@
     h1 { margin:0; font:400 clamp(2.85rem,9vw,4.15rem)/1.04 Georgia,"Times New Roman",serif; letter-spacing:-.045em; }
     h1 em { color:var(--accent); font-weight:400; }
     .intro { max-width:370px; margin:10px auto 0; color:var(--muted); font-size:.98rem; }
-    .links { display:grid; gap:10px; }
+    .links { display:grid; grid-auto-rows:1fr; gap:10px; }
     .link-card { display:flex; align-items:center; gap:16px; min-height:88px; padding:15px 20px 15px 23px; border:1px solid var(--line); border-radius:15px; background:#fff; text-decoration:none; box-shadow:0 6px 20px #18212e08; }
     a.link-card { transition:transform .18s,border-color .18s,box-shadow .18s; }
     a.link-card:hover { transform:translateY(-3px); border-color:var(--accent); box-shadow:0 12px 28px #18212e12; }
@@ -39,8 +39,8 @@
     .arrow { display:grid; place-items:center; width:35px; height:35px; border-radius:50%; background:var(--accent); color:#fff; font-size:1.2rem; line-height:1; }
     .pending { background:#f1ede5; box-shadow:none; }
     .pending .link-number,.pending .link-title { color:#6b6c66; }
-    .pending .link-note { color:#676f73; }
-    .pending .arrow { background:var(--line); color:#686f70; }
+    .pending .link-note { color:#676f73; font-size:.75rem; line-height:1.35; }
+    .pending .arrow { background:var(--line); color:#686f70; font-size:.6rem; font-weight:800; text-transform:uppercase; }
     footer { margin-top:22px; color:var(--muted); font-size:.74rem; text-align:center; }
     @keyframes rise-in { from { opacity:0; transform:translateY(14px); } to { opacity:1; transform:translateY(0); } }
     @keyframes portrait-float { 50% { transform:translateY(-5px); } }
@@ -71,7 +71,7 @@
     <nav class="links" aria-label="Explore Digital Tilda">
       <a class="link-card" href="/guides/"><span class="link-number" aria-hidden="true">01</span><span class="link-copy"><span class="link-title">Free AI guides</span><span class="link-note">Start with something useful</span></span><span class="arrow" aria-hidden="true">↗</span></a>
       <a class="link-card" href="https://whop.com/digitaltilda/clone-academy/" target="_blank" rel="noopener noreferrer"><span class="link-number" aria-hidden="true">02</span><span class="link-copy"><span class="link-title">Join my community</span><span class="link-note">Learn and create together</span></span><span class="arrow" aria-hidden="true">↗</span></a>
-      <div class="link-card pending" aria-label="AI wealth: Ways to make money online using AI. Book link coming soon"><span class="link-number" aria-hidden="true">03</span><span class="link-copy"><span class="link-title">AI wealth: Ways to make money online using AI</span><span class="link-note">Book link coming soon</span></span><span class="arrow" aria-hidden="true">·</span></div>
+      <div class="link-card pending" aria-label="AI wealth: Ways to make money online using AI. Book link coming soon"><span class="link-number" aria-hidden="true">03</span><span class="link-copy"><span class="link-title">AI wealth:</span><span class="link-note">Ways to make money online using AI</span></span><span class="arrow" aria-hidden="true">Soon</span></div>
     </nav>
     <footer>© 2026 Matilda Nkem · Digital Tilda</footer>
   </main>
