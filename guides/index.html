@@ -51,21 +51,40 @@
     @media(max-width:600px) { .topic-grid { grid-template-columns:1fr; } .topic-card { min-height:0; } .wrap { width:min(100% - 32px,1120px); } .grid { grid-template-columns:1fr; } .card { min-height:0; } .section-heading { align-items:start; flex-direction:column; gap:4px; } }
     @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .card,.topic-card { transition:none; } }
   </style>
+  <link rel="stylesheet" href="/assets/site.css">
+  <link rel="icon" href="/assets/brand/favicon.png?v=2" type="image/png">
+  <script src="/assets/site-config.js" defer></script>
+  <script src="/assets/site.js" defer></script>
+<link rel="stylesheet" href="/assets/content-covers.css">
 </head>
-<body>
-  <header class="site-header"><div class="wrap"><a class="brand" href="/">Tilda Nk</a><nav aria-label="Site"><a href="/">Home</a></nav></div></header>
+<body class="guide-library">
+<a class="skip-link" href="#guides">Skip to content</a>
+<header class="site-header"><div class="site-shell">
+<a class="site-brand" href="/" aria-label="Digital Tilda home"><img class="brand-logo" src="/assets/brand/digital-tilda-monogram.webp" width="256" height="256" alt="Digital Tilda" decoding="async"></a>
+<nav class="site-nav" id="site-navigation" aria-label="Main navigation"><a href="/">Home</a>
+<a href="/guides/" aria-current="page">Guides</a>
+<a href="/#newsletter">Newsletter</a>
+<a href="/partnerships/">Partnerships</a></nav>
+<a class="button header-cta" href="/#newsletter">Join the newsletter <span aria-hidden="true">↗</span></a>
+<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">Menu</button>
+</div></header>
   <div class="hero"><div class="wrap"><p class="eyebrow">The practical collection</p><h1>Make more of <em>AI.</em></h1><p class="intro">Clear, practical guides for using AI tools, creating useful work, and turning ideas into something real. Pick a topic and start where you are.</p></div></div>
   <main class="wrap" id="guides"><div class="section-heading"><h2>Browse by topic</h2><p class="count">28 guides</p></div>
     <div class="topic-grid">
-      <a class="topic-card" href="/guides/claude/"><p class="eyebrow">15 guides</p><h2>Claude</h2><p>Explore Claude chat, Claude Code, prompts, content, websites and practical workflows.</p><span>Explore Claude guides →</span></a>
-      <a class="topic-card" href="/guides/chatgpt/"><p class="eyebrow">10 guides</p><h2>ChatGPT</h2><p>Find ChatGPT prompts, settings, creative projects and connected workflows.</p><span>Explore ChatGPT guides →</span></a>
+      <a class="topic-card visual-card" href="/guides/claude/"><div class="card-art"><img src="/assets/covers/website-builder-960.webp" srcset="/assets/covers/website-builder-480.webp 480w, /assets/covers/website-builder-960.webp 960w, /assets/covers/website-builder-1440.webp 1440w" sizes="(max-width: 600px) calc(100vw - 32px), 550px" width="960" height="640" alt="" loading="lazy" decoding="async"></div><div class="card-body"><p class="eyebrow">15 guides</p><h2>Claude</h2><p>Explore Claude chat, Claude Code, prompts, content, websites and practical workflows.</p><span>Explore Claude guides →</span></div></a>
+      <a class="topic-card visual-card" href="/guides/chatgpt/"><div class="card-art"><img src="/assets/covers/chat-toolkit-960.webp" srcset="/assets/covers/chat-toolkit-480.webp 480w, /assets/covers/chat-toolkit-960.webp 960w, /assets/covers/chat-toolkit-1440.webp 1440w" sizes="(max-width: 600px) calc(100vw - 32px), 550px" width="960" height="640" alt="" loading="lazy" decoding="async"></div><div class="card-body"><p class="eyebrow">10 guides</p><h2>ChatGPT</h2><p>Find ChatGPT prompts, settings, creative projects and connected workflows.</p><span>Explore ChatGPT guides →</span></div></a>
     </div>
     <section aria-labelledby="more-guides"><div class="section-heading"><h2 id="more-guides">More guides</h2><p class="count">3 guides</p></div>
     <div class="grid">
-      <a class="card" href="/guides/digital-product-launch-bundle/"><p class="eyebrow">Digital products</p><h3>The Beginner Digital Product Launch Bundle</h3><p>Go from a useful idea to a finished product, a sales page, and a tested checkout.</p><span>Read the guide →</span></a>
-      <a class="card" href="/guides/gmail-subscription-cleanup/"><p class="eyebrow">Gmail · Productivity</p><h3>The Gmail Subscription Cleanup Guide</h3><p>Find mailing lists, unsubscribe carefully and keep the messages that matter.</p><span>Read the guide →</span></a>
-      <a class="card" href="/guides/human-writing-workflow/"><p class="eyebrow">AI · Writing</p><h3>Make AI-Assisted Copy Sound Like You</h3><p>A source-based editing workflow for clearer, more natural copy that you can honestly stand behind.</p><span>Read the guide →</span></a>
+      <a class="card visual-card" href="/guides/digital-product-launch-bundle/"><div class="card-art"><img src="/assets/covers/business-launch-960.webp" srcset="/assets/covers/business-launch-480.webp 480w, /assets/covers/business-launch-960.webp 960w, /assets/covers/business-launch-1440.webp 1440w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 850px) 46vw, 360px" width="960" height="640" alt="" loading="lazy" decoding="async"></div><div class="card-body"><p class="eyebrow">Digital products</p><h3>The Beginner Digital Product Launch Bundle</h3><p>Go from a useful idea to a finished product, a sales page, and a tested checkout.</p><span>Read the guide →</span></div></a>
+      <a class="card visual-card" href="/guides/gmail-subscription-cleanup/"><div class="card-art"><img src="/assets/covers/connected-workflow-960.webp" srcset="/assets/covers/connected-workflow-480.webp 480w, /assets/covers/connected-workflow-960.webp 960w, /assets/covers/connected-workflow-1440.webp 1440w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 850px) 46vw, 360px" width="960" height="640" alt="" loading="lazy" decoding="async"></div><div class="card-body"><p class="eyebrow">Gmail · Productivity</p><h3>The Gmail Subscription Cleanup Guide</h3><p>Find mailing lists, unsubscribe carefully and keep the messages that matter.</p><span>Read the guide →</span></div></a>
+      <a class="card visual-card" href="/guides/human-writing-workflow/"><div class="card-art"><img src="/assets/covers/writing-desk-960.webp" srcset="/assets/covers/writing-desk-480.webp 480w, /assets/covers/writing-desk-960.webp 960w, /assets/covers/writing-desk-1440.webp 1440w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 850px) 46vw, 360px" width="960" height="640" alt="" loading="lazy" decoding="async"></div><div class="card-body"><p class="eyebrow">AI · Writing</p><h3>Make AI-Assisted Copy Sound Like You</h3><p>A source-based editing workflow for clearer, more natural copy that you can honestly stand behind.</p><span>Read the guide →</span></div></a>
     </div></section></main>
-  <footer><div class="wrap">© 2026 Tilda Nk · Practical guides for making AI useful.</div></footer>
+<footer class="site-footer"><div class="site-shell">
+<div class="footer-top"><div class="footer-brand"><a class="site-brand" href="/" aria-label="Digital Tilda home"><img class="brand-logo" src="/assets/brand/digital-tilda-monogram.webp" width="256" height="256" alt="Digital Tilda" decoding="async"></a><p>Practical AI for everyday people.<br>A little curiosity. A lot you can create.</p></div>
+<div><p class="footer-label">Explore</p><nav class="footer-links" aria-label="Footer navigation"><a href="/">Home</a><a href="/guides/">Guides</a><a href="/#newsletter">Newsletter</a><a href="/partnerships/">Partnerships</a></nav></div>
+<div><p class="footer-label">Let’s connect</p><div class="footer-links"><a href="https://www.tiktok.com/@digital.tilda" target="_blank" rel="noopener noreferrer">TikTok ↗</a><a href="https://substack.com/@tildank1" target="_blank" rel="noopener noreferrer">Substack ↗</a><a href="https://www.instagram.com/digital.tilda/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://www.youtube.com/@DigitalTilda" target="_blank" rel="noopener noreferrer">YouTube ↗</a><a href="mailto:tildankem@gmail.com" data-contact-email>Email ↗</a></div></div></div>
+<div class="footer-bottom"><p>© 2026 Matilda Nkem · Digital Tilda</p><p>Made for your next “I did that” moment.</p></div>
+</div></footer>
 </body>
 </html>

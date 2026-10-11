@@ -1,0 +1,5 @@
+# Local source portraits and earlier variants; optimized production assets are tracked.
+/assets/photos/matilda-laptop-ai*
+/assets/photos/matilda-macbook-ai.png
+/assets/favicon.svg
+.DS_Store
