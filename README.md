@@ -12,6 +12,8 @@ python3 -m http.server 8765 --bind 127.0.0.1
 
 Open http://127.0.0.1:8765/ for the homepage, http://127.0.0.1:8765/partnerships/ for Partnerships, or http://127.0.0.1:8765/guides/ for the existing collection. Use an HTTP server instead of opening the HTML file directly because the site uses root-relative URLs.
 
+The AI Income Playbook reader is available at http://127.0.0.1:8765/book/. Its self-contained source is `book/index.html`, with a link from `/bio/`. The supplied manuscript references a practice workbook and tool directory that were not included; those references are shown as text until companion files are supplied.
+
 ## Owner settings
 
 - **Newsletter:** `newsletterUrl` in `assets/site-config.js` is connected to the supplied Substack profile, `https://substack.com/@tildank1`. The button opens the profile so visitors can read and follow there. A direct link also works without JavaScript. This website collects no email addresses and does not simulate subscription success. If the URL changes, update the configuration, homepage fallback, and shared social links.
