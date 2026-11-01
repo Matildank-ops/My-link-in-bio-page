@@ -12,7 +12,7 @@ python3 -m http.server 8765 --bind 127.0.0.1
 
 Open http://127.0.0.1:8765/ for the homepage, http://127.0.0.1:8765/partnerships/ for Partnerships, or http://127.0.0.1:8765/guides/ for the existing collection. Use an HTTP server instead of opening the HTML file directly because the site uses root-relative URLs.
 
-The AI Income Playbook reader is available at http://127.0.0.1:8765/book/. Its self-contained source is `book/index.html`, with a link from `/bio/`. The supplied manuscript references a practice workbook and tool directory that were not included; those references are shown as text until companion files are supplied.
+The public `/book/` URL redirects to the AI Income Playbook sales page on Whop, which is also linked from `/bio/`. The reader lives under a randomly generated path in `access/`; share that buyer link through Whop rather than public site navigation. The reader requests no search indexing and sends no referrer on outgoing visits. The random URL is shareable and its source is in this public repository; it is not authentication or buyer verification. The supplied manuscript references a practice workbook and tool directory that were not included; those references are shown as text until companion files are supplied.
 
 ## Owner settings
 
